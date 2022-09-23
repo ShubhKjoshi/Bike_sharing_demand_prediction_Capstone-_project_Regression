@@ -36,41 +36,19 @@ During the time of our analysis, we initially did EDA on all the features of our
 
 Next we implemented some machine learning algorithms Linear Regression, lasso,ridge, elasticnet, decission tree, Random Forest and XGB Regressor. We did hyperparameter tuning(Gridsearch CV) to improve our model performance.
 
-Now that we are finished implementing all the models, its time to evaluate them and conclude our findings and learnings over them.
+Now that we are finished implementing all the models, its time to evaluate them and conclude our findings and learnings over them:
 
-Lets start by looking at the training scores for all the model
-  
-Model	                                     MAE	 MSE  	  RMSE	 R2_score   Adjusted R2
-Linear regression	                        4.474	 35.078  	5.923 	0.772	   0.77
-Lasso regression	                        7.255	 91.594	  9.570 	0.405	   0.39
-Ridge regression	                        4.474	 35.078	  5.923 	0.772	   0.77
-Elastic net regression	                  5.792 	57.574  7.588	0.626	     0.62
-Lasso regression with Cross-validation    4.474	 35.079	  5.923	  0.772	   0.77
-Ridge regression with Cross-validation	  4.474	 35.078	  5.923  	0.772	   0.77
-Decision tree regression	                3.562	 23.342	  4.831	  0.848	   0.85
-Random forest regression	                 0.803 1.613	  1.270	  0.990	   0.99
-Random forest regression with gridSearchCV 1.419 4.989	  2.234	  0.968	   0.97
-XGBoost Regression	                       3.288 18.940	  4.352   0.877	   0.87
+Linear Regression, Lasso , Ridge and Elastic net performed moderately and gave an R2 score of 77, 78, 78 and 62% respectively for test dataset.
 
-
-Also below are the testing scores for all the models.
-
-Model	                                        MAE	    MSE	   RMSE	    R2_score Adjusted R2
-Linear regression	                            4.474	  33.275	5.768  	0.772	   0.77
-Lasso regression	                            7.456	  96.775	9.837	  0.387	   0.37
-Ridge regression	                            4.410	  33.277	5.769	  0.789	   0.78	
-Elastic net regression Test	                  5.874	  59.451	7.710	  0.624	   0.62
-Lasso regression Test with cross-validation  	4.410	  33.276	5.769	  0.789	   0.78	
-Ridge regression Test with cross-validation	  4.413	  33.291	5.770  	0.789	   0.78
-Decision tree regression	                    4.031	  32.245	5.678  	0.796	   0.79
-Random forest regression	                    2.203	  12.576	3.546	  0.920	   0.92
-Random forest regression with gridSearchCV	  2.401	  14.174	3.765	  0.910	   0.91
-XGBoost regression	                          3.508	  21.640	4.652	  0.863	   0.86
-
+ Decision Tree, Random forest Regressor, Random forest Regressor with gridsearchCV and XGB Regressor gives the highest R2 score of 80%,92%, 91%   and 86% respectively for test dataset.
+ 
+Feature Importance value for Random Forest and Gradient Boost were  different
+.
 No overfitting is seen, as we can see the models are performing well with the test data with good results.
 
-• Random forest Regressor, Random forest Regressor with gridsearchCV and XGB Regressor gives the highest R2 score of 92%, 91% and 86% recpectively for test dataset.
+Overall Tree based algorithms gave better performance with respect to linear algorithms.
 
-• Feature Importance value for Random Forest and Gradient Boost are different.
+Finally, we can say that Random Forest model performed best out of all the models.
+
 
 However, this is not the ultimate end. As this data is time dependent, the values for variables like temperature, windspeed, solar radiation etc., will not always be consistent. Therefore, there will be scenarios where the model might not perform well. As Machine learning is an exponentially evolving field, we will have to be prepared for all contingencies and also keep checking our model from time to time. Therefore, having a quality knowledge and keeping pace with the ever evolving ML field would surely help one to stay a step ahead in future.
